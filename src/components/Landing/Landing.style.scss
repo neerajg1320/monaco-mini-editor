@@ -1,0 +1,17 @@
+// $--background:white;
+
+.background{
+    background-color: var(--background);
+}
+
+.register-button{
+    background-color: var(--primary);
+}
+.login-button{
+    background-color: var(--secondary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+}
+.heading{
+    color: var(--text);
+}
