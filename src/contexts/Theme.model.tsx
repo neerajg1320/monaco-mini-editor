@@ -7,5 +7,6 @@ export interface Theme {
     '--secondary': Color,
     '--background': Color,
     '--white': Color,
-    '--text': Color
+    '--text': Color,
+    '--navBackground': Color
 }

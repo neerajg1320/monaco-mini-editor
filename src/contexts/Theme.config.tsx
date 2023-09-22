@@ -8,6 +8,7 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--secondary': Color.BLACK,
         '--white': Color.WHITE,
         '--text': Color.WHITE,
+        '--navBackground': Color.BLACK
     },
     normal:{
         '--primary': Color.LIGHT_BLUE,
@@ -15,6 +16,7 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--background': Color.BLUE,
         '--white': Color.WHITE,
         '--text': Color.WHITE,
+        '--navBackground': Color.BLUE
     },
     light:{
         '--primary': Color.LIGHT_BLUE,
@@ -22,5 +24,6 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--background': Color.WHITE,
         '--white': Color.WHITE,
         '--text': Color.BLACK,
+        '--navBackground': Color.BLACK
     }
 }

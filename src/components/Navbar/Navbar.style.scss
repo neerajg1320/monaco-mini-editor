@@ -1,0 +1,8 @@
+.nav-background{
+    background-color: var(--navBackground);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: #000000df 0px 2px 10px;
+}

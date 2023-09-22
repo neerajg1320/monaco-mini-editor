@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme } from '../../contexts/Theme.context'
-import './PopUp.style.scss';
+import './Menu.style.scss';
 
 const Setting: React.FC = () => {
 
@@ -10,10 +10,13 @@ const Setting: React.FC = () => {
     setSettingButton(!settingButton);
   }
 
+  console.log(`Setting -->  settingButton: ${settingButton}`);
   return (
     <div>
-      <div style={{...theme as React.CSSProperties}} className=' inline cursor-pointer right-0 m-4 absolute' onClick={handleSettingButton}
-      onFocus={()=>console.log("focus")}>
+      <div style={{...theme as React.CSSProperties}} className=' inline cursor-pointer right-0 m-3 absolute' 
+      // onClick={handleSettingButton}
+      onMouseEnter={handleSettingButton}
+      onMouseLeave={()=>setSettingButton(false)}>
       <i className="fa fa-gear gear-color text-2xl"></i>
     </div>
     </div>

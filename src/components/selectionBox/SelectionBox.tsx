@@ -7,11 +7,13 @@ const SelectionBox = () => {
 
     const handleThemeChange:React.ChangeEventHandler<HTMLSelectElement> = (e)=>{
         // const theme = e.target.value;
-        setCurrentTheme(e.target.value as ThemeType);
+      setCurrentTheme(e.target.value as ThemeType);
     }
+
+    console.log(`selectionBox`);
   return (
     <div>
-      <select value={themeType} onChange={handleThemeChange}>
+      <select value={themeType} onChange={handleThemeChange} className='border-2 border-slate-600 rounded-xl px-3'>
         <option value="normal">Normal</option>
         <option value="dark">Dark</option>
         <option value="light">Light</option>

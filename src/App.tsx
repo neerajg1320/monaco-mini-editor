@@ -1,25 +1,23 @@
-// import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import Landing from "./components/Landing/Landing";
-import SelectionBox from "./components/selectionBox/SelectionBox";
-import PopUp from "./components/setting/PopUp";
+import Menu from "./components/setting/Menu";
 import Setting from "./components/setting/Setting";
 import { useTheme } from "./contexts/Theme.context";
-// import Signin from "./components/Signin";
-// import Signup from "./components/Signup";
+import Navbar from "./components/Navbar/Navbar";
 // import Editor from "@monaco-editor/react";
 
 const App: React.FC = () => {
   const {theme, settingButton} = useTheme();
 
   // console.log("theme : ", theme);
+  console.log('App');
   return (
     <div style={{...theme as React.CSSProperties}}>
+      <Navbar/>
       <Setting/>
-      {settingButton && <PopUp/>}
-      <Landing />
-      {/* <Signin />
-      <Signup /> */}
+      {settingButton && <Menu/>}
+      <Outlet/>
     </div>
   );
 };
