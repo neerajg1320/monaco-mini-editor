@@ -1,0 +1,49 @@
+.form-background{
+    background-color: var(--formBackground);
+    color: var(--formTextColor);
+    // box-shadow: ;
+}
+
+input[type="text"], input[type="password"]  {
+    background-color: transparent;
+    outline: none;
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+    // border-bottom: 2px solid var(--formTextColor);
+
+}
+
+input[type="text"]:focus + .border, input[type="password"]:focus + .border {
+    animation-name: borderOnFocus;
+    animation-duration: 1.5s;
+}
+
+@keyframes borderOnFocus {
+    0%{
+       width:0%;
+        // background-color: black;
+    }
+    100%{
+        width:100%;
+    }
+    
+}
+
+.signup-background{
+    background-color: var(--background);
+}
+.form-box-shadow{
+    box-shadow: rgba(0, 0, 0, 0.434) 0px 0px 10px 7px;
+}
+
+.register-form-bg-color{
+    background-color: var(--buttonBackground);
+}
+
+.border{
+    margin: auto;
+    width:100%;
+    height:0.13rem;
+    border:none;
+    background-color: var(--formTextColor);
+}

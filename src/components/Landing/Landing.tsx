@@ -9,7 +9,7 @@ const Landing: React.FC = () => {
   return (
     <div
       style={{ ...(theme as React.CSSProperties) }}
-      className="grid h-[88vh] gap-6 items-end grid-rows-2 grid-cols-3 content-end background"
+      className="grid min-h-[88vh] gap-6 items-end grid-rows-2 grid-cols-3 content-end background"
     >
       
       <div className="text-5xl col-span-2 col-start-2 heading">

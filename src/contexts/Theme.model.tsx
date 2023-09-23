@@ -8,5 +8,9 @@ export interface Theme {
     '--background': Color,
     '--white': Color,
     '--text': Color,
-    '--navBackground': Color
+    '--navBackground': Color,
+    '--formBackground': Color,
+    '--formTextColor': Color,
+    '--buttonBackground': Color
+    // '--'
 }

@@ -8,7 +8,10 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--secondary': Color.BLACK,
         '--white': Color.WHITE,
         '--text': Color.WHITE,
-        '--navBackground': Color.BLACK
+        '--navBackground': Color.BLACK,
+        '--formBackground': Color.LIGHT_BLACK,
+        '--formTextColor': Color.WHITE,
+        '--buttonBackground': Color.GREEN
     },
     normal:{
         '--primary': Color.LIGHT_BLUE,
@@ -16,7 +19,10 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--background': Color.BLUE,
         '--white': Color.WHITE,
         '--text': Color.WHITE,
-        '--navBackground': Color.BLUE
+        '--navBackground': Color.BLUE,
+        '--formBackground': Color.LIGHT_BLUE,
+        '--formTextColor': Color.BLACK,
+        '--buttonBackground': Color.BLUE
     },
     light:{
         '--primary': Color.LIGHT_BLUE,
@@ -24,6 +30,9 @@ export const THEMES: Record<ThemeType, Theme>= {
         '--background': Color.WHITE,
         '--white': Color.WHITE,
         '--text': Color.BLACK,
-        '--navBackground': Color.BLACK
+        '--navBackground': Color.BLACK,
+        '--formBackground': Color.LIGHT_BLUE,
+        '--formTextColor': Color.BLACK,
+        '--buttonBackground': Color.BLACK
     }
 }

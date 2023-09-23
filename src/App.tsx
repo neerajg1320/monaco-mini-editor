@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 // import Editor from "@monaco-editor/react";
 
 const App: React.FC = () => {
-  const {theme, settingButton} = useTheme();
+  const {theme} = useTheme();
 
   // console.log("theme : ", theme);
   console.log('App');
@@ -16,7 +16,6 @@ const App: React.FC = () => {
     <div style={{...theme as React.CSSProperties}}>
       <Navbar/>
       <Setting/>
-      {settingButton && <Menu/>}
       <Outlet/>
     </div>
   );
