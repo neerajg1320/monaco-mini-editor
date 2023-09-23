@@ -21,6 +21,63 @@
     animation:4s;
 }
 
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: start;
+    width:50%;
+    top:0;
+    align-items: center;
+    height:100vh;
+    // padding-left: 2.5rem;
+    background-color: #000000;
+    box-shadow: #000000df 2px 0px 10px;
+    padding-top:4rem;
+
+    li:first-child{
+        width:auto;
+    }
+
+    li{
+        width: 100%;
+        text-align: center;
+    }
+
+    li:first-child:hover{
+        background-color: transparent;
+        color:white;
+    }
+
+    li:hover{
+        background-color: var(--primary);
+        color:var(--formTextColor);
+        transition: 1s;
+    }
+
+}
+
+
+.none{
+    display: none;
+}
+
+@media (min-width: 640px){
+    .sidebar{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        height:auto;
+        padding-left: 2.5rem;
+        background-color: transparent;
+        box-shadow: none;
+        padding-top: 0px;
+    
+    }
+}
+
 // @keyframes sidebar {
 //     0%{
 //         left:-999px;
