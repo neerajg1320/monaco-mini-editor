@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTheme } from "../../contexts/Theme.context";
 import "./Navbar.style.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { theme } = useTheme();
@@ -17,7 +18,12 @@ const Navbar = () => {
     >
       <div className="pl-14">
         <i className="fa fa-bars text-2xl sm:hidden cursor-pointer mr-5" onClick={handleToggle}></i>
+        <Link to="/">
+        <span>
+
         WebAppStarter
+        </span>
+        </Link>
       </div>
 
       <ul className={`sidebar ${toggle? 'sidebar': 'none'}`}>

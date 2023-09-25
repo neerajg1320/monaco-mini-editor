@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '../../contexts/Theme.context';
 import './Signup.style.scss';
+import { Link } from 'react-router-dom';
 
 const Signup: React.FC = () => {
   const { theme } = useTheme();
@@ -39,6 +40,12 @@ const Signup: React.FC = () => {
         <div className='flex w-[35vw] justify-between mt-2'>
           <button className='px-5 py-1 rounded-3xl register-form-bg-color text-white'>Register</button>
           <button className='bg-red-600 px-5 py-1 rounded-3xl text-white' >Cancel</button>
+        </div>
+        <div className="">
+          Already Registered?{" "}
+          <Link to="/login">
+            <span className="not-member-register">Login</span>
+          </Link>
         </div>
       </form>
     </div>

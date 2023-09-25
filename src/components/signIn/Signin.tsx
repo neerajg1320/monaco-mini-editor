@@ -1,11 +1,44 @@
-import React from 'react'
+import React from "react";
+import { useTheme } from "../../contexts/Theme.context";
+import "./SignIn.style.scss";
+import { Link } from "react-router-dom";
 
 const Signin: React.FC = () => {
+  const { theme } = useTheme();
   return (
-    <div>
-      Signin page
+    <div
+      style={{ ...(theme as React.CSSProperties) }}
+      className="min-h-[88vh] flex items-start justify-center py-10 signup-background"
+    >
+      <form className="flex flex-col bg-red-500  items-center py-5 text-lg gap-6 form-background w-1/2 rounded-lg form-box-shadow ">
+        <label className="flex flex-col w-[35vw]">
+          Email
+          <input type="text" placeholder="Email" className="mt-0.5" />
+          <div className="border"></div>
+        </label>
+        <label className="flex flex-col w-[35vw] ">
+          Password
+          <input type="password" placeholder="Password" className="mt-0.5" />
+          <div className="border"></div>
+        </label>
+        <div className="self-end pr-[7vw]">Forgot Password?</div>
+        <div className="flex w-[35vw] justify-between mt-2">
+          <button className="px-5 py-1 rounded-3xl register-form-bg-color text-white">
+            Login
+          </button>
+          <button className="bg-red-600 px-5 py-1 rounded-3xl text-white">
+            Cancel
+          </button>
+        </div>
+        <div className="">
+          Not Registered yet?{" "}
+          <Link to="/register">
+            <span className="not-member-register">Register</span>
+          </Link>
+        </div>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Signin
+export default Signin;

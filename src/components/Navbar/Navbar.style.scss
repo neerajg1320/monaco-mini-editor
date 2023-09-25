@@ -34,7 +34,7 @@
     background-color: #000000;
     box-shadow: #000000df 2px 0px 10px;
     padding-top: 4rem;
-    left:0px;
+    left: 0px;
     transition: 0.5s;
     transition-delay: 0.5s;
     transition-timing-function: ease-in-out;
@@ -63,7 +63,7 @@
 
 .none {
     // display: none;
-    left:-999px;
+    left: -999px;
     transition: 0s;
 }
 
@@ -79,12 +79,12 @@
         background-color: transparent;
         box-shadow: none;
         padding-top: 0px;
-        left:0;
+        left: 0;
         transition: 0s;
-    
+
         li:hover {
             background-color: transparent;
-            color:white;
+            color: white;
         }
     }
 }

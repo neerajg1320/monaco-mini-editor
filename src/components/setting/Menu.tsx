@@ -11,7 +11,7 @@ const Menu = () => {
   return (
     <div
       style={{ ...(theme as React.CSSProperties) }}
-      className=" w-[20%] absolute right-0 top-[19%] mr-4 p-3 menu-background font-bold box-shadow-menu"
+      className="absolute right-0 top-[19%] mr-4 p-3 menu-background font-bold box-shadow-menu"
       onMouseEnter={()=>setSettingButton(true)}
       onMouseLeave={()=>setSettingButton(false)}
     >
