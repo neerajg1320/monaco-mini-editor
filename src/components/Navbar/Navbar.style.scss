@@ -1,4 +1,4 @@
-.nav-background{
+.nav-background {
     background-color: var(--navBackground);
     color: var(--white);
     position: sticky;
@@ -7,74 +7,85 @@
     box-shadow: #000000df 0px 2px 10px;
 }
 
-.background-sm{
+.background-sm {
     background-color: #000000;
     box-shadow: #000000df 2px 0px 10px;
 }
 
-.background-lg{
+.background-lg {
     background-color: var(--navBackground);
 }
 
-.sidebar-animation{
+.sidebar-animation {
     animation: sidebar;
-    animation:4s;
+    animation: 4s;
 }
 
-.sidebar{
+.sidebar {
     display: flex;
     flex-direction: column;
     position: absolute;
-    justify-content: start;
-    width:50%;
-    top:0;
+    justify-content: flex-start;
+    width: 50%;
+    top: 0;
     align-items: center;
-    height:100vh;
+    height: 100vh;
     // padding-left: 2.5rem;
     background-color: #000000;
     box-shadow: #000000df 2px 0px 10px;
-    padding-top:4rem;
+    padding-top: 4rem;
+    left:0px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
 
-    li:first-child{
-        width:auto;
+    li:first-child {
+        width: auto;
     }
 
-    li{
+    li {
         width: 100%;
         text-align: center;
     }
 
-    li:first-child:hover{
+    li:first-child:hover {
         background-color: transparent;
-        color:white;
+        color: white;
     }
 
-    li:hover{
+    li:hover {
         background-color: var(--primary);
-        color:var(--formTextColor);
+        color: black;
         transition: 1s;
     }
 
 }
 
-
-.none{
-    display: none;
+.none {
+    // display: none;
+    left:-999px;
+    transition: 0s;
 }
 
-@media (min-width: 640px){
-    .sidebar{
+@media (min-width: 640px) {
+    .sidebar {
         display: flex;
         flex-direction: row;
         position: relative;
         justify-content: space-around;
         align-items: center;
-        height:auto;
+        height: auto;
         padding-left: 2.5rem;
         background-color: transparent;
         box-shadow: none;
         padding-top: 0px;
+        left:0;
+        transition: 0s;
     
+        li:hover {
+            background-color: transparent;
+            color:white;
+        }
     }
 }
 

@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
 
       <ul className={`sidebar ${toggle? 'sidebar': 'none'}`}>
-        <li className="cursor-pointer sm:hidden absolute top-5 right-5 text-2xl" onClick={handleToggle}><i className="fa fa-close" ></i></li>
+        <li className="cursor-pointer sm:hidden absolute top-5 right-5 text-xl" onClick={handleToggle}><i className="fa fa-close" ></i></li>
         <li className="py-4 sm:py-0">HOME</li>
         <li className="py-4 sm:py-0">Contact</li>
         <li className="py-4 sm:py-0">About</li>
