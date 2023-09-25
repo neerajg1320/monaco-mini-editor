@@ -10,19 +10,19 @@ const Signin: React.FC = () => {
       style={{ ...(theme as React.CSSProperties) }}
       className="min-h-[88vh] flex items-start justify-center py-10 signup-background"
     >
-      <form className="flex flex-col bg-red-500  items-center py-5 text-lg gap-6 form-background w-1/2 rounded-lg form-box-shadow ">
-        <label className="flex flex-col w-[35vw]">
+      <form className="flex flex-col bg-red-500  items-center py-5 text-lg gap-6 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4">
+        <label className="flex flex-col w-9/12">
           Email
           <input type="text" placeholder="Email" className="mt-0.5" />
           <div className="border"></div>
         </label>
-        <label className="flex flex-col w-[35vw] ">
+        <label className="flex flex-col w-9/12 ">
           Password
           <input type="password" placeholder="Password" className="mt-0.5" />
           <div className="border"></div>
         </label>
-        <div className="self-end pr-[7vw]">Forgot Password?</div>
-        <div className="flex w-[35vw] justify-between mt-2">
+        <div className="text-end w-9/12">Forgot Password?</div>
+        <div className="flex w-9/12 justify-between mt-2">
           <button className="px-5 py-1 rounded-3xl register-form-bg-color text-white">
             Login
           </button>
