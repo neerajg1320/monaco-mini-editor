@@ -17,14 +17,14 @@ const Landing: React.FC = () => {
       </div>
       <div className="col-start-2">
         <Link to="/register">
-          <button className=" w-40 py-4 rounded-xl mb-4  register-button">
+          <button className=" w-40 py-4 rounded-xl mb-4  register-button font-bold text-[1.1rem]">
             Register
           </button>
         </Link>
       </div>
       <div>
         <Link to="/login">
-          <button className=" w-40 py-4 rounded-xl mb-4 login-button">
+          <button className=" w-40 py-4 rounded-xl mb-4 login-button font-bold text-[1.1rem]">
             Login
           </button>
         </Link>

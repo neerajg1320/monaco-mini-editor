@@ -1,7 +1,5 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import Landing from "./components/Landing/Landing";
-import Menu from "./components/setting/Menu";
 import Setting from "./components/setting/Setting";
 import { useTheme } from "./contexts/Theme.context";
 import Navbar from "./components/Navbar/Navbar";

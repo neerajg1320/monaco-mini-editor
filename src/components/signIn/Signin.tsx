@@ -21,19 +21,19 @@ const Signin: React.FC = () => {
           <input type="password" placeholder="Password" className="mt-0.5" />
           <div className="border"></div>
         </label>
-        <div className="text-end w-9/12">Forgot Password?</div>
+        <div className="text-end w-9/12 hover:underline hover:underline-offset-2">Forgot Password?</div>
         <div className="flex w-9/12 justify-between mt-2">
           <button className="px-5 py-1 rounded-3xl register-form-bg-color text-white">
             Login
           </button>
-          <button className="bg-red-600 px-5 py-1 rounded-3xl text-white">
+          <button className="bg-red-600 px-5 py-1 rounded-3xl text-white cancel-button">
             Cancel
           </button>
         </div>
         <div className="">
           Not Registered yet?{" "}
           <Link to="/register">
-            <span className="not-member-register">Register</span>
+            <span className="not-member-register hover:underline hover:underline-offset-2">Register</span>
           </Link>
         </div>
       </form>

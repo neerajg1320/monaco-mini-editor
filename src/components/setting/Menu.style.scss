@@ -2,10 +2,18 @@
     background-color: var(--primary);
 }
 
+.gear:hover{
+    transform: rotate(-35deg);
+    transition: 0.2s;
+}
+.gear{
+    transition: 0.2s;
+}
+
 .gear-color{
     color: var(--text);
 }
 
 .box-shadow-menu{
-    box-shadow: 0 9px 20px -6px #6e6868;
+    box-shadow: 0 9px 20px -6px #000000;
 }

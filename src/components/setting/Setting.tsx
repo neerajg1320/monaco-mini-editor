@@ -15,7 +15,7 @@ const Setting: React.FC = () => {
     <div>
       <div
         style={{ ...(theme as React.CSSProperties) }}
-        className=" inline cursor-pointer right-0 m-3 absolute"
+        className=" inline cursor-pointer right-0 m-3 absolute gear"
         onMouseEnter={handleSettingButton}
         onMouseLeave={() => setSettingButton(false)}
       >

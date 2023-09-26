@@ -6,11 +6,18 @@
 
 .register-button{
     background-color: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.401) 2px 5px 4px 2px;
+}
+
+.register-button:hover, .login-button:hover{
+    transform: scale(0.9);
+    transition: 0.4s;
 }
 .login-button{
     background-color: var(--secondary);
     color: var(--white);
     border: 2px solid var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.401) 2px 5px 4px 2px;
 }
 .heading{
     color: var(--text);

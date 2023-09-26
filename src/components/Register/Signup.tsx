@@ -39,12 +39,12 @@ const Signup: React.FC = () => {
         </label>
         <div className='flex w-9/12 justify-between mt-2'>
           <button className='px-5 py-1 rounded-3xl register-form-bg-color text-white'>Register</button>
-          <button className='bg-red-600 px-5 py-1 rounded-3xl text-white' >Cancel</button>
+          <button className='bg-red-600 px-5 py-1 rounded-3xl text-white cancel-button' >Cancel</button>
         </div>
         <div className="">
           Already Registered?{" "}
           <Link to="/login">
-            <span className="not-member-register">Login</span>
+            <span className="not-member-register hover:underline hover:underline-offset-2">Login</span>
           </Link>
         </div>
       </form>

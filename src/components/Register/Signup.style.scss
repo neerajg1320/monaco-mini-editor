@@ -15,7 +15,7 @@ input[type="text"], input[type="password"]  {
 
 input[type="text"]:focus + .border, input[type="password"]:focus + .border {
     animation-name: borderOnFocus;
-    animation-duration: 1.5s;
+    animation-duration: 0.75s;
 }
 
 @keyframes borderOnFocus {
@@ -38,6 +38,14 @@ input[type="text"]:focus + .border, input[type="password"]:focus + .border {
 
 .register-form-bg-color{
     background-color: var(--buttonBackground);
+    box-shadow:  0px 15px 20px rgba(0, 0, 0, 0.445);
+}
+.register-form-bg-color:hover, .cancel-button:hover{
+    transform: translate(-5px, 7px);
+}
+
+.cancel-button{
+    box-shadow:  0px 15px 20px rgba(0, 0, 0, 0.444);
 }
 
 .border{
@@ -47,3 +55,4 @@ input[type="text"]:focus + .border, input[type="password"]:focus + .border {
     border:none;
     background-color: var(--formTextColor);
 }
+
