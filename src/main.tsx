@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signin from "./components/signIn/Signin.tsx";
 import Signup from "./components/Register/Signup.tsx";
 import Landing from "./components/Landing/Landing.tsx";
+import ResetPassword from "./components/ResetPassword/ResetPassword.tsx";
+import VerifyEmail from "./components/verifyEmail/VerifyEmail.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: "/reset-password",
+    element: <ResetPassword/>
+  },
+  {
+    path: "/verify-email",
+    element: <VerifyEmail/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

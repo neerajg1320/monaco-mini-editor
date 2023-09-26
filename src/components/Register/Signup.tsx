@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../../contexts/Theme.context';
 import './Signup.style.scss';
 import { Link } from 'react-router-dom';
 
 const Signup: React.FC = () => {
   const { theme } = useTheme();
+  const [verifyEmailMsg, setVerifyEmailMsg] = useState<boolean>(false);
+
+  const handleRegister = ()=>{
+    setVerifyEmailMsg(true);
+    setTimeout(()=>{
+      setVerifyEmailMsg(false);
+    }, 60000)
+  }
   console.log(`landing page`);
   return (
     <div
@@ -38,7 +46,7 @@ const Signup: React.FC = () => {
           <div className='border'></div>
         </label>
         <div className='flex w-9/12 justify-between mt-2'>
-          <button className='px-5 py-1 rounded-3xl register-form-bg-color text-white'>Register</button>
+          <button className='px-5 py-1 rounded-3xl register-form-bg-color text-white' onClick={handleRegister}>Register</button>
           <button className='bg-red-600 px-5 py-1 rounded-3xl text-white cancel-button' >Cancel</button>
         </div>
         <div className="">
@@ -47,6 +55,7 @@ const Signup: React.FC = () => {
             <span className="not-member-register hover:underline hover:underline-offset-2">Login</span>
           </Link>
         </div>
+        {verifyEmailMsg && <div>Verfication Email has been sent</div>}
       </form>
     </div>
   )
