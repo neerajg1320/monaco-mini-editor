@@ -15,7 +15,7 @@ const EmailVerificationBox = () => {
           className="fa fa-check-square-o text-5xl text-green-700"
           aria-hidden="true"
         ></i>
-        <h2>Email Verified Successfully</h2>
+        <h2>User Activated Successfully</h2>
         <Link to="/login">
           <button className="px-5 py-1 rounded-3xl register-form-bg-color text-white">
             Login

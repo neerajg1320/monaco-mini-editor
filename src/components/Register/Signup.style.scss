@@ -38,14 +38,14 @@ input[type="text"]:focus + .border, input[type="password"]:focus + .border {
 
 .register-form-bg-color{
     background-color: var(--buttonBackground);
-    box-shadow:  0px 15px 20px rgba(0, 0, 0, 0.445);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .register-form-bg-color:hover, .cancel-button:hover{
-    transform: translate(-5px, 7px);
+    transform: translate(-3px, 4px);
 }
 
 .cancel-button{
-    box-shadow:  0px 15px 20px rgba(0, 0, 0, 0.444);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .border{
