@@ -9,6 +9,7 @@ import Signup from "./components/Register/Signup.tsx";
 import Landing from "./components/Landing/Landing.tsx";
 import ResetPassword from "./components/ResetPassword/ResetPassword.tsx";
 import VerifyEmail from "./components/verifyEmail/VerifyEmail.tsx";
+import ActivateMsgEmail from "./components/activateMsg/activateMsg.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/verify-email",
     element: <VerifyEmail/>
+  },
+  {
+    path: "/activate-user",
+    element: <ActivateMsgEmail/>
   }
 ]);
 

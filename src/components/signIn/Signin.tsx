@@ -18,9 +18,9 @@ const Signin: React.FC = () => {
   return (
     <div
       style={{ ...(theme as React.CSSProperties) }}
-      className="min-h-[88vh] flex items-start justify-center py-10 signup-background"
+      className="min-h-[88vh] flex items-start justify-center py-24 signup-background"
     >
-      <form className="flex flex-col bg-red-500  items-center py-5 text-lg gap-6 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4">
+      <form className="flex flex-col bg-red-500  items-center pt-14 pb-4 text-lg gap-6 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4">
         <label className="flex flex-col w-9/12">
           Email
           <input type="text" placeholder="Email" className="mt-0.5" />
@@ -53,12 +53,10 @@ const Signin: React.FC = () => {
               Register
             </span>
           </Link>
-        </div>
-        {resetMsg && (
-          <div className="text-slate-800 ">
+        </div>     
+          <div className={`text-slate-800 ${resetMsg? 'block': 'invisible'}`}>
             Password Reset Email has been Sent
           </div>
-        )}
       </form>
     </div>
   );
