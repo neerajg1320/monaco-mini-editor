@@ -9,7 +9,7 @@ import Signup from "./components/Register/Signup.tsx";
 import Landing from "./components/Landing/Landing.tsx";
 import ResetPassword from "./components/ResetPassword/ResetPassword.tsx";
 import VerifyEmail from "./components/verifyEmail/VerifyEmail.tsx";
-import ActivateMsgEmail from "./components/activateMsg/activateMsg.tsx";
+import ActivateMsgEmail from "./components/activateMsg/ActivateMsg.tsx";
 
 const router = createBrowserRouter([
   {
