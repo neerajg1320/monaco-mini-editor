@@ -67,6 +67,18 @@
     transition: 0s;
 }
 
+.settingMenu-background{
+    background-color: var(--primary);
+}
+
+.upper{
+    transform: rotate(90deg);
+}
+
+.dropdown-top{
+    top: 18.5rem;
+}
+
 @media (min-width: 640px) {
     .sidebar {
         display: flex;
@@ -88,7 +100,18 @@
             cursor: pointer;
         }
     }
+
+    .setting-dropdown-left{
+        right:0;
+    }
+    .dropdown-top{
+        top: 4rem;
+    }
 }
+
+
+
+
 
 // @keyframes sidebar {
 //     0%{
