@@ -52,7 +52,7 @@ const Navbar = () => {
         <li className="py-4 sm:py-0">Contact</li>
         <li className="py-4 sm:py-0">About</li>
         <li className="py-4 sm:py-0 flex items-center justify-center gap-2" onClick={handleSettingDropdown}>
-          Setting <span className={`${openSettingDropdown? '-rotate-90': 'rotate-90'} upper duration-100 inline-block text-xl`}>&lt;</span>
+          Setting <span className={`${openSettingDropdown? 'rotate-180': ''} duration-150 inline-block text-xl`}><i className="fa fa-caret-down" aria-hidden="true"></i></span>
         </li>
       </ul>
       {openSettingDropdown && (
