@@ -33,7 +33,7 @@ const Signin: React.FC = () => {
         </label>
 
         <div
-          className="text-end w-9/12 hover:underline hover:underline-offset-2"
+          className="text-end w-9/12 hover:underline hover:underline-offset-2 cursor-default"
           onClick={handleForgotPassword}
         >
           Forgot Password?
