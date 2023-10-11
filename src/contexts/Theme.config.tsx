@@ -4,8 +4,8 @@ import { Theme, ThemeType } from "./Theme.model";
 export const THEMES: Record<ThemeType, Theme>= {
     dark:{
         '--primary': Color.GREEN,
-        '--background': Color.LIGHT_BLACK,
         '--secondary': Color.BLACK,
+        '--background': Color.LIGHT_BLACK,
         '--white': Color.WHITE,
         '--text': Color.WHITE,
         '--navBackground': Color.BLACK,

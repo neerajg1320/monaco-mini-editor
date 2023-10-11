@@ -9,16 +9,8 @@ const Navbar = () => {
   const { theme } = useTheme();
   const [toggle, setToggle] = useState(false);
   const [openSettingDropdown, setOpenSettingDropdown] = useState(false);
-  const [dropdownCord, setDropdownCord] = useState<{ x: Number; y: Number }>({
-    x: 0,
-    y: 0,
-  });
 
-  const handleSettingDropdown: React.MouseEventHandler<HTMLLIElement> = (e) => {
-    setDropdownCord({
-      x: e.pageX,
-      y: e.pageY,
-    });
+  const handleSettingDropdown= () => {
     setOpenSettingDropdown(!openSettingDropdown);
   };
 
@@ -41,7 +33,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <ul className={`sidebar ${toggle ? "sidebar" : "none"}`}>
+      <ul className={`sidebar ${toggle ? "" : "none"}`}>
         <li
           className="cursor-pointer sm:hidden absolute top-5 right-5 text-xl"
           onClick={handleToggle}
@@ -51,15 +43,21 @@ const Navbar = () => {
         <li className="py-4 sm:py-0">HOME</li>
         <li className="py-4 sm:py-0">Contact</li>
         <li className="py-4 sm:py-0">About</li>
-        <li className="py-4 sm:py-0 flex items-center justify-center gap-2" onClick={handleSettingDropdown}>
-          Setting <span className={`${openSettingDropdown? 'rotate-180': ''} duration-150 inline-block text-xl`}><i className="fa fa-caret-down" aria-hidden="true"></i></span>
+        <li
+          className="py-4 sm:py-0 flex items-center justify-center gap-2"
+          onClick={handleSettingDropdown}
+        >
+          Setting{" "}
+          <span
+            className={`${
+              openSettingDropdown ? "rotate-180" : ""
+            } duration-150 inline-block text-xl`}
+          >
+            <i className="fa fa-caret-down" aria-hidden="true"></i>
+          </span>
         </li>
       </ul>
-      {openSettingDropdown && (
-        // <CheckOutSide onClickOutside={setOpenSettingDropdown}>
-        <SettingMenu dropDownCord={dropdownCord}/>
-        // </CheckOutSide>
-      )}
+      {openSettingDropdown && <SettingMenu />}
     </div>
   );
 };

@@ -30,7 +30,6 @@
     top: 0;
     align-items: center;
     height: 100vh;
-    // padding-left: 2.5rem;
     background-color: #000000;
     box-shadow: #000000df 2px 0px 10px;
     padding-top: 4rem;
@@ -96,7 +95,7 @@
 
         li:hover {
             background-color: transparent;
-            color:rgb(141, 141, 141);
+            color:rgb(215, 215, 215);
             cursor: pointer;
         }
     }
@@ -108,16 +107,3 @@
         top: 4.7rem;
     }
 }
-
-
-
-
-
-// @keyframes sidebar {
-//     0%{
-//         left:-999px;
-//     }
-//     100%{
-//         left:0px;
-//     }
-// }

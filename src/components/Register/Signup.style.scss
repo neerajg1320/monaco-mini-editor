@@ -1,7 +1,6 @@
 .form-background{
     background-color: var(--formBackground);
     color: var(--formTextColor);
-    // box-shadow: ;
 }
 
 input[type="text"], input[type="password"]  {
@@ -9,7 +8,6 @@ input[type="text"], input[type="password"]  {
     outline: none;
     padding-left: 0.5rem;
     font-size: 0.9rem;
-    // border-bottom: 2px solid var(--formTextColor);
 
 }
 
@@ -21,7 +19,6 @@ input[type="text"]:focus + .border, input[type="password"]:focus + .border {
 @keyframes borderOnFocus {
     0%{
        width:0%;
-        // background-color: black;
     }
     100%{
         width:100%;
