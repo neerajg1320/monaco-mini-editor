@@ -8,6 +8,9 @@ export type data = {
 
 export type formFieldPropTypes = {
     fieldName: string,
-    fieldType: string
-
+    fieldType: string,
+    fieldValue: string,
+    labelName: string,
+    setFormData: React.Dispatch<React.SetStateAction<data>>,
+    formData: data
 }

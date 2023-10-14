@@ -3,7 +3,7 @@
     color: var(--formTextColor);
 }
 
-input[type="text"], input[type="password"]  {
+.form-background input {
     background-color: transparent;
     outline: none;
     padding-left: 0.5rem;
@@ -11,7 +11,7 @@ input[type="text"], input[type="password"]  {
 
 }
 
-input[type="text"]:focus + .border, input[type="password"]:focus + .border {
+.form-background input:focus + .border {
     animation-name: borderOnFocus;
     animation-duration: 0.75s;
 }
