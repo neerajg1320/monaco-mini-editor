@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "../../contexts/Theme.context";
 import "./Navbar.style.scss";
 import { Link } from "react-router-dom";
-import SettingMenu from "../SettingMenu/SettingMenu";
+import SettingMenu from "../settingMenu/SettingMenu";
 // import CheckOutSide from "../CheckOutside";
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="flex justify-between h-[12vh] items-center nav-background"
+      className="flex justify-between h-[72px] items-center nav-background"
       style={{ ...(theme as React.CSSProperties) }}
     >
       <div className="pl-14">

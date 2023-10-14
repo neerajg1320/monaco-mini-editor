@@ -4,12 +4,12 @@ import App from "./App.tsx";
 import "./index.css";
 import { ThemeProvider } from "./contexts/Theme.context.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Signin from "./components/signIn/Signin.tsx";
-import Signup from "./components/Register/Signup.tsx";
-import Landing from "./components/Landing/Landing.tsx";
-import ResetPassword from "./components/ResetPassword/ResetPassword.tsx";
-import VerifyEmail from "./components/verifyEmail/VerifyEmail.tsx";
-import ActivateMsgEmail from "./components/activateMsg/ActivateMsg.tsx";
+import Signin from "./pages/login/Signin.tsx";
+import Signup from "./pages/register/Signup.tsx";
+import Landing from "./pages/landing/Landing.tsx";
+import ResetPassword from "./pages/resetPassword/ResetPassword.tsx";
+import VerifyEmail from "./pages/verifyEmail/VerifyEmail.tsx";
+import ActivateMsgEmail from "./pages/activateMsg/ActivateMsg.tsx";
 
 const router = createBrowserRouter([
   {

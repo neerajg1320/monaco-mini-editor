@@ -7,20 +7,18 @@ import { useTheme } from "../../contexts/Theme.context";
 const Menu = () => {
   const { theme, setSettingButton } = useTheme();
 
-  console.log('Menu')
+  console.log("Menu");
   return (
     <div
       style={{ ...(theme as React.CSSProperties) }}
-      className="absolute right-0 top-[19%] mr-4 p-3 menu-background font-bold box-shadow-menu"
-      onMouseEnter={()=>setSettingButton(true)}
-      onMouseLeave={()=>setSettingButton(false)}
+      className="absolute right-0 top-[115px] mr-4 p-3 menu-background font-bold box-shadow-menu"
+      onMouseEnter={() => setSettingButton(true)}
+      onMouseLeave={() => setSettingButton(false)}
     >
-      {/* <div className="w-2 h-2 bg-black"></div> */}
-      
       <div className="flex gap-2">
         <h2 className="mb-2">Select Theme</h2>
         {/* <CheckOutSide onClickOutside={setSettingButton}> */}
-          <SelectionBox />
+        <SelectionBox />
         {/* </CheckOutSide> */}
       </div>
     </div>

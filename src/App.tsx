@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Setting from "./components/setting/Setting";
 import { useTheme } from "./contexts/Theme.context";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 // import Editor from "@monaco-editor/react";
 
 const App: React.FC = () => {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "../../contexts/Theme.context";
 import "./SignIn.style.scss";
 import { Link } from "react-router-dom";
+import FormField from "../../components/formField/FormField";
 
 const Signin: React.FC = () => {
   const { theme } = useTheme();
@@ -21,16 +22,8 @@ const Signin: React.FC = () => {
       className="min-h-[88vh] flex items-start justify-center py-24 signup-background"
     >
       <form className="flex flex-col bg-red-500  items-center pt-14 pb-9 text-lg gap-6 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4">
-        <label className="flex flex-col w-9/12">
-          Email
-          <input type="text" className="mt-0.5" />
-          <div className="border"></div>
-        </label>
-        <label className="flex flex-col w-9/12 ">
-          Password
-          <input type="password"  className="mt-0.5" />
-          <div className="border"></div>
-        </label>
+      <FormField fieldName="Email" fieldType="text"/>
+       <FormField fieldName="Password" fieldType="password"/>
 
         <div
           className="text-end w-9/12 hover:underline hover:underline-offset-2 cursor-default"

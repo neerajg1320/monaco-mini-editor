@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 import { useTheme } from "../../contexts/Theme.context";
+import FormField from "../../components/formField/FormField";
 
 const ResetPasswordForm = () => {
   const { theme } = useTheme();
@@ -10,16 +11,8 @@ const ResetPasswordForm = () => {
       className="min-h-[88vh] flex items-start justify-center py-24 signup-background"
     >
       <form className="flex flex-col bg-red-500  items-center py-14 text-lg gap-6 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4">
-        <label className="flex flex-col w-9/12">
-          Password
-          <input type="password" className="mt-0.5" />
-          <div className="border"></div>
-        </label>
-        <label className="flex flex-col w-9/12 ">
-          Confirm Password
-          <input type="password" placeholder="Password" className="mt-0.5" />
-          <div className="border"></div>
-        </label>
+        <FormField fieldName="Password" fieldType="password"/>
+        <FormField fieldName="Confirm Password" fieldType="password"/>
         <div className="flex w-9/12 justify-between mt-7">
           <button className="px-5 py-1 rounded-3xl register-form-bg-color text-white">
             Set

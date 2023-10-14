@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/navbar/Navbar";
 import { useTheme } from "../../contexts/Theme.context";
 import { Link } from "react-router-dom";
 
