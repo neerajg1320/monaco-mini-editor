@@ -9,8 +9,11 @@ const FormField = ({fieldName, fieldType, fieldValue, labelName, setFormData, fo
 
   return (
     <label className="flex flex-col w-9/12">
+      <div>
       {labelName}
-      <input type={fieldType} name={fieldName} value={fieldValue} className="mt-0.5" onChange={handleInputChange}/>
+      <span className="text-red-600 text-xl">*</span>
+      </div>
+      <input type={fieldType} name={fieldName} value={fieldValue} className="mt-0.5" onChange={handleInputChange} required/>
       <div className="border"></div>
     </label>
   );

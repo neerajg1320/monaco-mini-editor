@@ -37,7 +37,7 @@
     background-color: var(--buttonBackground);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.register-form-bg-color:hover, .cancel-button:hover{
+.register-form-bg-color:active, .cancel-button:active{
     transform: translate(-3px, 4px);
 }
 

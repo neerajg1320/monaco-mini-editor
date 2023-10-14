@@ -4,6 +4,7 @@ import "./Signup.style.scss";
 import { Link } from "react-router-dom";
 import { data } from "../../types/types";
 import FormField from "../../components/formField/FormField";
+import { register } from "../../api/api";
 // import VerifyEmail from '../verifyEmail/VerifyEmail';
 
 const Signup: React.FC = () => {
@@ -17,16 +18,19 @@ const Signup: React.FC = () => {
     password2: "",
   });
 
-  const handleRegister: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleRegister: React.FormEventHandler<HTMLFormElement> = (e) => {
+    
     e.preventDefault();
-    setVerifyEmailMsg(true);
+    console.log(e);
+    register(data, setVerifyEmailMsg);
+    // setVerifyEmailMsg(true);
     setTimeout(() => {
       setVerifyEmailMsg(false);
     }, 60000);
   };
   console.log(`landing page`);
 
-  console.log(`data: `, data);
+  // console.log(`data: `, data);
   return (
     <div
       style={{ ...(theme as React.CSSProperties) }}
@@ -35,6 +39,7 @@ const Signup: React.FC = () => {
       <form
         className="flex flex-col bg-red-500  items-center pt-14 text-lg gap-6 pb-10 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4"
         method="POST"
+        onSubmit={handleRegister}
       >
         <FormField labelName="Email" fieldType="email" fieldName="email" fieldValue={data.email} setFormData={setData} formData={data}/>
         <FormField labelName="Password" fieldType="password" fieldName="password1" fieldValue={data.password1} setFormData={setData} formData={data}/>
@@ -43,8 +48,8 @@ const Signup: React.FC = () => {
         <FormField labelName="Last Name" fieldType="text" fieldName="last_name" fieldValue={data.last_name} setFormData={setData} formData={data}/>
         <div className="flex w-9/12 justify-between mt-7 ">
           <button
-            className="px-5 py-1 rounded-3xl register-form-bg-color text-white"
-            onClick={handleRegister}
+            className="px-5 py-1 rounded-3xl register-form-bg-color text-white" type="submit"
+            
           >
             Register
           </button>
