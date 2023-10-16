@@ -17,20 +17,22 @@ const Signup: React.FC = () => {
     password1: "",
     password2: "",
   });
-  const [errorMsg, setErrorMsg] = useState<string[] | undefined>();
+  const [errorMsg, setErrorMsg] = useState<string[] | undefined>([""]);
 
-  
-  const handleRegister: React.FormEventHandler<HTMLFormElement> = async(e) => {
-    
+  const handleRegister: React.FormEventHandler<HTMLFormElement> = async (e) => {
     // let errorMsg: string[] ;
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
+    setErrorMsg([""]);
     await register(data, setVerifyEmailMsg, setErrorMsg);
-    console.log("errorMsg",errorMsg);
+    console.log("errorMsg", errorMsg);
     // setVerifyEmailMsg(true);
+    // if(verifyEmailMsg){
+
+    // }
     setTimeout(() => {
       setVerifyEmailMsg(false);
-    }, 60000);
+    }, 30000);
   };
   console.log(`landing page`);
 
@@ -41,19 +43,64 @@ const Signup: React.FC = () => {
       className="min-h-[88vh] flex items-center justify-center py-24 signup-background"
     >
       <form
-        className="flex flex-col bg-red-500  items-center pt-14 text-lg gap-6 pb-10 form-background sm:w-1/2 rounded-lg form-box-shadow w-3/4"
+        className="flex flex-col bg-red-500  items-center pt-8 text-lg gap-6 pb-10 form-background sm:w-1/2 rounded-lg form-box-shadow w-10/12"
         method="POST"
         onSubmit={handleRegister}
       >
-        <FormField labelName="Email" fieldType="email" fieldName="email" fieldValue={data.email} setFormData={setData} formData={data}/>
-        <FormField labelName="Password" fieldType="password" fieldName="password1" fieldValue={data.password1} setFormData={setData} formData={data}/>
-        <FormField labelName="Confirm" fieldType="password" fieldName="password2" fieldValue={data.password2} setFormData={setData} formData={data}/>
-        <FormField labelName="First Name" fieldType="text" fieldName="first_name" fieldValue={data.first_name} setFormData={setData} formData={data}/>
-        <FormField labelName="Last Name" fieldType="text" fieldName="last_name" fieldValue={data.last_name} setFormData={setData} formData={data}/>
+        <div
+          className={` text-red-500 text-center font-bold h-[10px] mb-3  text-sm`}
+        >
+          {errorMsg}
+        </div>
+        <FormField
+          labelName="Email"
+          fieldType="email"
+          fieldName="email"
+          fieldValue={data.email}
+          setFormData={setData}
+          formData={data}
+          required={true}
+        />
+        <FormField
+          labelName="Password"
+          fieldType="password"
+          fieldName="password1"
+          fieldValue={data.password1}
+          setFormData={setData}
+          formData={data}
+          required={true}
+        />
+        <FormField
+          labelName="Confirm"
+          fieldType="password"
+          fieldName="password2"
+          fieldValue={data.password2}
+          setFormData={setData}
+          formData={data}
+          required={true}
+        />
+        <FormField
+          labelName="First Name"
+          fieldType="text"
+          fieldName="first_name"
+          fieldValue={data.first_name}
+          setFormData={setData}
+          formData={data}
+          required={true}
+        />
+        <FormField
+          labelName="Last Name"
+          fieldType="text"
+          fieldName="last_name"
+          fieldValue={data.last_name}
+          setFormData={setData}
+          formData={data}
+          required={true}
+        />
         <div className="flex w-9/12 justify-between mt-7 ">
           <button
-            className="px-5 py-1 rounded-3xl register-form-bg-color text-white" type="submit"
-            
+            className="px-5 py-1 rounded-3xl register-form-bg-color text-white"
+            type="submit"
           >
             Register
           </button>
@@ -68,7 +115,11 @@ const Signup: React.FC = () => {
               Login
             </span>
           </Link>
-          <div className={` mt-2 ${verifyEmailMsg ? `block` : `invisible`}`}>
+          <div
+            className={` mt-2 ${
+              verifyEmailMsg ? `block` : `invisible`
+            } font-bold`}
+          >
             Verfication Email has been sent
           </div>
         </div>

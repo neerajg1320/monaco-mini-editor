@@ -18,9 +18,12 @@ export const register = async (
     if (response?.status == 400) {
       if (response.data.email) {
         setErrorMsg((response.data as registerResponseData).email);
-      }
-      if (response.data.non_field_errors) {
+      } else if (response.data.non_field_errors) {
         setErrorMsg((response.data as registerResponseData).non_field_errors);
+      } else if (response.data.password1) {
+        setErrorMsg((response.data as registerResponseData).password1);
+      } else if (response.data.password2) {
+        setErrorMsg((response.data as registerResponseData).password2);
       }
     }
   } catch (err) {
