@@ -2,27 +2,31 @@ import React, { useState } from "react";
 import { useTheme } from "../../contexts/Theme.context";
 import "./Signup.style.scss";
 import { Link } from "react-router-dom";
-import { data } from "../../types/types";
+import { registerRequestData } from "../../types/types";
 import FormField from "../../components/formField/FormField";
-import { register } from "../../api/api";
+import { register } from "../../api/auth";
 // import VerifyEmail from '../verifyEmail/VerifyEmail';
 
 const Signup: React.FC = () => {
   const { theme } = useTheme();
   const [verifyEmailMsg, setVerifyEmailMsg] = useState<boolean>(false);
-  const [data, setData] = useState<data>({
+  const [data, setData] = useState<registerRequestData>({
     email: "",
     first_name: "",
     last_name: "",
     password1: "",
     password2: "",
   });
+  const [errorMsg, setErrorMsg] = useState<string[] | undefined>();
 
-  const handleRegister: React.FormEventHandler<HTMLFormElement> = (e) => {
+  
+  const handleRegister: React.FormEventHandler<HTMLFormElement> = async(e) => {
     
+    // let errorMsg: string[] ;
     e.preventDefault();
     console.log(e);
-    register(data, setVerifyEmailMsg);
+    await register(data, setVerifyEmailMsg, setErrorMsg);
+    console.log("errorMsg",errorMsg);
     // setVerifyEmailMsg(true);
     setTimeout(() => {
       setVerifyEmailMsg(false);

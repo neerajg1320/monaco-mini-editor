@@ -3,14 +3,20 @@ import { useTheme } from "../../contexts/Theme.context";
 import "./Navbar.style.scss";
 import { Link } from "react-router-dom";
 import SettingMenu from "../settingMenu/SettingMenu";
+import ListItem from "./ListItem";
 // import CheckOutSide from "../CheckOutside";
+
+
+// const NavItems = ()=>{
+//   return <></>
+// }
 
 const Navbar = () => {
   const { theme } = useTheme();
   const [toggle, setToggle] = useState(false);
   const [openSettingDropdown, setOpenSettingDropdown] = useState(false);
 
-  const handleSettingDropdown= () => {
+  const handleSettingDropdown = () => {
     setOpenSettingDropdown(!openSettingDropdown);
   };
 
@@ -34,28 +40,32 @@ const Navbar = () => {
       </div>
 
       <ul className={`sidebar ${toggle ? "" : "none"}`}>
-        <li
-          className="cursor-pointer sm:hidden absolute top-5 right-5 text-xl"
-          onClick={handleToggle}
-        >
-          <i className="fa fa-close"></i>
-        </li>
-        <li className="py-4 sm:py-0">HOME</li>
-        <li className="py-4 sm:py-0">Contact</li>
-        <li className="py-4 sm:py-0">About</li>
-        <li
-          className="py-4 sm:py-0 flex items-center justify-center gap-2"
-          onClick={handleSettingDropdown}
-        >
-          Setting{" "}
-          <span
-            className={`${
-              openSettingDropdown ? "rotate-180" : ""
-            } duration-150 inline-block text-xl`}
+        <ListItem>
+          <div
+            className="cursor-pointer sm:hidden absolute top-5 right-5 text-xl"
+            onClick={handleToggle}
           >
-            <i className="fa fa-caret-down" aria-hidden="true"></i>
-          </span>
-        </li>
+            <i className="fa fa-close"></i>
+          </div>
+        </ListItem>
+        <ListItem>Home</ListItem>
+        <ListItem>Contact</ListItem>
+        <ListItem>About</ListItem>
+        <ListItem>
+          <div
+            className="flex items-center justify-center gap-2"
+            onClick={handleSettingDropdown}
+          >
+            Setting{" "}
+            <span
+              className={`${
+                openSettingDropdown ? "rotate-180" : ""
+              } duration-150 inline-block text-xl`}
+            >
+              <i className="fa fa-caret-down" aria-hidden="true"></i>
+            </span>
+          </div>
+        </ListItem>
       </ul>
       {openSettingDropdown && <SettingMenu />}
     </div>

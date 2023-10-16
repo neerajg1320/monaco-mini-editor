@@ -1,4 +1,4 @@
-export type data = {
+export type registerRequestData = {
     email: string,
     first_name: string,
     last_name: string,
@@ -13,4 +13,14 @@ export type formFieldPropTypes = {
     labelName: string,
     setFormData: React.Dispatch<React.SetStateAction<data>>,
     formData: data
+}
+
+type emailError = string[];
+
+type non_field_errors = string[];
+
+export type registerResponseData= {
+    email?: emailError,
+    non_field_errors?: non_field_errors,
+    detail?: string
 }
