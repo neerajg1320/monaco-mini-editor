@@ -24,6 +24,6 @@ export const register = async (
       }
     }
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 };
