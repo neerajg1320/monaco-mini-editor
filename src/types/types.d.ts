@@ -56,3 +56,9 @@ export type loginResponseData = {
   non_field_error?: string[],
 
 }
+
+export type navItemsProps = {
+  openSettingDropdown: boolean;
+  setOpenSettingDropdown: React.Dispatch<React.SetStateAction<boolean>>;
+  handleToggle: ()=>void;
+}

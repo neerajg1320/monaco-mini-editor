@@ -3,22 +3,13 @@ import { useTheme } from "../../contexts/Theme.context";
 import "./Navbar.style.scss";
 import { Link } from "react-router-dom";
 import SettingMenu from "../settingMenu/SettingMenu";
-import ListItem from "./ListItem";
+import NavItems from "../navItems/NavItems.tsx";
 // import CheckOutSide from "../CheckOutside";
-
-
-// const NavItems = ()=>{
-//   return <></>
-// }
 
 const Navbar = () => {
   const { theme } = useTheme();
-  const [toggle, setToggle] = useState(false);
   const [openSettingDropdown, setOpenSettingDropdown] = useState(false);
-
-  const handleSettingDropdown = () => {
-    setOpenSettingDropdown(!openSettingDropdown);
-  };
+  const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -39,33 +30,20 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <ul className={`sidebar ${toggle ? "" : "none"}`}>
-        <ListItem>
-          <div
-            className="cursor-pointer sm:hidden absolute top-5 right-5 text-xl"
-            onClick={handleToggle}
-          >
-            <i className="fa fa-close"></i>
-          </div>
-        </ListItem>
-        <ListItem>Home</ListItem>
-        <ListItem>Contact</ListItem>
-        <ListItem>About</ListItem>
-        <ListItem>
-          <div
-            className="flex items-center justify-center gap-2"
-            onClick={handleSettingDropdown}
-          >
-            Setting{" "}
-            <span
-              className={`${
-                openSettingDropdown ? "rotate-180" : ""
-              } duration-150 inline-block text-xl`}
-            >
-              <i className="fa fa-caret-down" aria-hidden="true"></i>
-            </span>
-          </div>
-        </ListItem>
+      <ul className="navbar-list list-style">
+        <NavItems
+          setOpenSettingDropdown={setOpenSettingDropdown}
+          openSettingDropdown={openSettingDropdown}
+          handleToggle={handleToggle}
+        />
+      </ul>
+
+      <ul className={`sidebar list-style ${toggle ? "" : "none"}`}>
+        <NavItems
+          setOpenSettingDropdown={setOpenSettingDropdown}
+          openSettingDropdown={openSettingDropdown}
+          handleToggle={handleToggle}
+        />
       </ul>
       {openSettingDropdown && <SettingMenu />}
     </div>
