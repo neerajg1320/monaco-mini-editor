@@ -1,11 +1,11 @@
 import axios, { AxiosError, AxiosResponse, isAxiosError } from "axios";
-import { registerRequestData, registerResponseData } from "../types/types";
+import { registerResponseData, requestData } from "../types/types";
 export class Api {
   BASE_URL = "https://api.webappstarter.com";
 
   async Post(
     endPoint: string,
-    data: registerRequestData
+    data: requestData
   ): Promise<AxiosResponse<registerResponseData, any> | undefined> {
     try {
       const response = await axios({

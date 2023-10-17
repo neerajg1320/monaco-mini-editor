@@ -1,4 +1,9 @@
-import { registerResponseData, registerRequestData } from "../types/types";
+import {
+  registerResponseData,
+  registerRequestData,
+  loginRequestData,
+  requestData,
+} from "../types/types";
 import { Api } from "./api";
 
 export const register = async (
@@ -8,7 +13,10 @@ export const register = async (
 ) => {
   try {
     const api = new Api();
-    let response = await api.Post("/api/v1/auth/registration/", data);
+    let response = await api.Post(
+      "/api/v1/auth/registration/",
+      data as requestData
+    );
     console.log(response);
 
     if (response?.status == 201) {
@@ -27,6 +35,32 @@ export const register = async (
       }
     }
   } catch (err) {
+    throw err;
+  }
+};
+
+export const login = async (
+  data: loginRequestData,
+  setIsLogin: React.Dispatch<React.SetStateAction<boolean>>,
+  setErrorMsg: React.Dispatch<React.SetStateAction<string[]>>
+) => {
+  try {
+    const api = new Api();
+    let response = await api.Post("/api/v1/auth/login/", data as requestData);
+
+    console.log("login response: ", response);
+
+    if (response?.status == 200) {
+      setIsLogin(true);
+    }
+
+    if (response?.status == 400) {
+      if (response.data.non_field_errors) {
+        setErrorMsg(response.data.non_field_errors);
+      }
+    }
+  } catch (err) {
+    console.log(err);
     throw err;
   }
 };

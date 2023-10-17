@@ -27,3 +27,32 @@ export type registerResponseData = {
   password1?: string[];
   password2?: string[];
 };
+
+export type loginRequestData = {
+  email: string,
+  password: string
+}
+
+export type requestData = {
+  registerResponseData?: registerRequestData;
+  loginRequestData?: loginRequestData
+}
+
+type user = {
+  pk: number;
+  email: string;
+  is_anonymous: boolean;
+  last_name: string
+}
+
+type loginData = {
+  access_token: string;
+  refresh_token: string;
+  user: user
+}
+
+export type loginResponseData = {
+  data?: loginData
+  non_field_error?: string[],
+
+}
