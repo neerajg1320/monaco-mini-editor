@@ -6,6 +6,11 @@ import SettingMenu from "../settingMenu/SettingMenu";
 import ListItem from "./ListItem";
 // import CheckOutSide from "../CheckOutside";
 
+
+// const NavItems = ()=>{
+//   return <></>
+// }
+
 const Navbar = () => {
   const { theme } = useTheme();
   const [toggle, setToggle] = useState(false);
