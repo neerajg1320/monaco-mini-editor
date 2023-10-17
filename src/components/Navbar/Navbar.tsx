@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useTheme } from "../../contexts/Theme.context";
 import "./Navbar.style.scss";
 import { Link } from "react-router-dom";
 import SettingMenu from "../settingMenu/SettingMenu";
 import ListItem from "./ListItem";
-// import CheckOutSide from "../CheckOutside";
+import CheckOutSide from "../CheckOutside";
+
 
 
 // const NavItems = ()=>{
@@ -16,6 +17,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [openSettingDropdown, setOpenSettingDropdown] = useState(false);
 
+  const newRef = useRef<HTMLDivElement>(null);
+
   const handleSettingDropdown = () => {
     setOpenSettingDropdown(!openSettingDropdown);
   };
@@ -25,6 +28,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <div
       className="flex justify-between h-[72px] items-center nav-background"
       style={{ ...(theme as React.CSSProperties) }}
@@ -55,20 +59,26 @@ const Navbar = () => {
           <div
             className="flex items-center justify-center gap-2"
             onClick={handleSettingDropdown}
+            ref={newRef}
           >
             Setting{" "}
             <span
               className={`${
                 openSettingDropdown ? "rotate-180" : ""
               } duration-150 inline-block text-xl`}
-            >
+              >
               <i className="fa fa-caret-down" aria-hidden="true"></i>
             </span>
           </div>
         </ListItem>
       </ul>
-      {openSettingDropdown && <SettingMenu />}
     </div>
+    {openSettingDropdown && 
+      <CheckOutSide onClickOutside={setOpenSettingDropdown} ref={newRef}>
+        <SettingMenu />
+      </CheckOutSide>
+      }
+  </>
   );
 };
 
